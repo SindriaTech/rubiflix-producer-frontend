@@ -40,7 +40,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   p {
+    font-family: 'Inter', sans-serif;
     color: ${({ theme }) => theme.color.text};
+    line-height: 150%;
 
     strong {
       font-family: inherit;
@@ -70,4 +72,14 @@ export const GridContainer = styled.div`
   padding: 0 24px;
 
   margin: 0 auto;
+`;
+
+export const DashboardBlock = styled.div`
+  background: ${({ theme }) => theme.color.primary_light};
+
+  border: 1px solid ${({ theme }) => theme.color.primary_lighten};
+
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+
+  border-radius: 16px;
 `;

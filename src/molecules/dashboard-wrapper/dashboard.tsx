@@ -3,12 +3,28 @@ import React from 'react';
 import { CustomLink } from '../../atoms';
 
 import { routes } from '../../constants';
+import { GridContainer } from '../../styles';
 
 import * as S from './styles';
 
 export const DashboardWrapper: React.FC = ({ children }) => (
   <S.Container>
-    <header>header</header>
+    <header>
+      <S.Header>
+        <GridContainer className="grid">
+          <div />
+          <div>
+            <S.Notifications>
+              <span className="material-icons-round">&#xe7f4;</span>
+            </S.Notifications>
+            <S.Profile>
+              <div />
+              <span className="material-icons-round">&#xe313;</span>
+            </S.Profile>
+          </div>
+        </GridContainer>
+      </S.Header>
+    </header>
     <aside>
       <S.Menu>
         <div className="logo" />
@@ -55,7 +71,8 @@ export const DashboardWrapper: React.FC = ({ children }) => (
       </S.Menu>
     </aside>
     <section>
-      <div>{children}</div>
+      <div className="background" />
+      <section>{children}</section>
     </section>
   </S.Container>
 );

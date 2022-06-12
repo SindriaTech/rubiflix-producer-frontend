@@ -1,6 +1,7 @@
 export const theme = {
   color: {
     white_50: 'rgba(255, 255, 255, 0.5)',
+    white_25: 'rgba(255, 255, 255, 0.25)',
     white: '#ffffff',
     text: 'rgba(255, 255, 255, 0.7)',
     primary_dark: '#141414',
@@ -20,7 +21,9 @@ export const theme = {
   },
   gradient: {
     gradient_purple:
-      'linear-gradient(275.26deg, #6407FC 27.98%, #8644F3 69.43%);'
+      'linear-gradient(275.26deg, #6407FC 27.98%, #8644F3 69.43%);',
+    gradient_orange:
+      'linear-gradient(94.05deg, rgba(253, 102, 0, 0.8) 40.92%, #F04E23 105.06%);'
   },
   shadow: {
     shadow_01: '0px 4px 24px rgba(0, 0, 0, 0.15)'

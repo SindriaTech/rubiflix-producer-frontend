@@ -24,6 +24,86 @@ export const Container = styled.div`
 
   > section {
     grid-area: content;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    > div {
+      width: 100%;
+      height: 250px;
+
+      background: ${({ theme }) => theme.gradient.gradient_purple};
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      z-index: 1;
+    }
+
+    > section {
+      padding-bottom: 80px;
+    }
+  }
+`;
+
+export const Header = styled.div`
+  width: 100%;
+  height: 100%;
+
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+`;
+
+export const Notifications = styled.div`
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: ${({ theme }) => theme.color.primary_light};
+
+  margin-right: 24px;
+
+  cursor: pointer;
+
+  span {
+    color: ${({ theme }) => theme.color.text};
+  }
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+
+  div {
+    width: 48px;
+    height: 48px;
+
+    background: ${({ theme }) => theme.color.primary_lighten};
+
+    border-radius: 50%;
+
+    margin-right: 4px;
+
+    border-radius: 2px solid ${({ theme }) => theme.color.primary_lighten};
+  }
+
+  span {
+    color: ${({ theme }) => theme.color.white_25};
   }
 `;
 
