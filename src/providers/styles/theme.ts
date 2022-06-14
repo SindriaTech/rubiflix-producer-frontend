@@ -6,6 +6,7 @@ export const theme = {
     text: 'rgba(255, 255, 255, 0.7)',
     primary_dark: '#141414',
     primary: '#161616',
+    primary_75: 'rgba(22, 22, 22, 0.75)',
     primary_light: '#181818',
     primary_lighten: '#202020',
     primary_lighten_2: '#242424',

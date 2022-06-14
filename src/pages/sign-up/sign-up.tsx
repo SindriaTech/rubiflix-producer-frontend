@@ -81,7 +81,7 @@ export const SignUp: React.FC = () => {
 
   const styled = useTheme();
   const [step, setStep] = useState<Step>({
-    number: 4
+    number: 0
   });
   const [firstStepDisabled, setFirstStepDisabled] = useState(false);
   const [secondStepDisabled, setSecondStepDisabled] = useState(false);

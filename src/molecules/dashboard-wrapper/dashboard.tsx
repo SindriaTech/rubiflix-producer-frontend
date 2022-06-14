@@ -3,6 +3,7 @@ import React from 'react';
 import { CustomLink } from '../../atoms';
 
 import { routes } from '../../constants';
+import { Modals } from '../../modals';
 import { GridContainer } from '../../styles';
 
 import * as S from './styles';
@@ -72,7 +73,8 @@ export const DashboardWrapper: React.FC = ({ children }) => (
     </aside>
     <section>
       <div className="background" />
-      <section>{children}</section>
+      <div className="content">{children}</div>
+      <Modals />
     </section>
   </S.Container>
 );

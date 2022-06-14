@@ -29,7 +29,7 @@ export const Container = styled.div`
 
     position: relative;
 
-    > div {
+    .background {
       width: 100%;
       height: 250px;
 
@@ -42,8 +42,14 @@ export const Container = styled.div`
       z-index: 1;
     }
 
-    > section {
+    .content {
       padding-bottom: 80px;
+
+      min-height: 100%;
+
+      z-index: 2;
+
+      position: relative;
     }
   }
 `;

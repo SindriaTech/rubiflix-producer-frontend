@@ -4,13 +4,6 @@ export const Container = styled.div`
   width: 100%;
 
   z-index: 1;
-`;
-
-export const Banner = styled.div`
-  width: 100%;
-  position: relative;
-
-  display: inline-block;
 
   .grid {
     position: relative;

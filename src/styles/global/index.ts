@@ -73,13 +73,3 @@ export const GridContainer = styled.div`
 
   margin: 0 auto;
 `;
-
-export const DashboardBlock = styled.div`
-  background: ${({ theme }) => theme.color.primary_light};
-
-  border: 1px solid ${({ theme }) => theme.color.primary_lighten};
-
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
-
-  border-radius: 16px;
-`;

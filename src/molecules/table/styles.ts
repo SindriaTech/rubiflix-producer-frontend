@@ -1,42 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  > div {
-    width: 100%;
-
-    padding: 24px 32px 0 32px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 48px;
-
-    button {
-      width: 160px;
-      height: 48px;
-
-      border-radius: 8px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: ${({ theme }) => theme.color.green};
-
-      span {
-        color: ${({ theme }) => theme.color.white};
-
-        margin-right: 16px;
-      }
-
-      p {
-        font-family: 'Monda', sans-serif;
-        color: ${({ theme }) => theme.color.white};
-      }
-    }
-  }
-
   table {
     width: 100%;
     border-collapse: collapse;
@@ -62,13 +26,20 @@ export const Container = styled.div`
 
         td {
           padding: 24px 0;
+
+          &:first-child {
+            border-radius: 0 0 0 16px;
+          }
+
+          &:last-child {
+            border-radius: 0 0 16px 0;
+          }
         }
 
         &:last-child {
           border-bottom: 0;
 
           td {
-            border-radius: 0 0 24px 24px;
           }
         }
       }

@@ -4,10 +4,6 @@ import * as S from './styles';
 
 interface TableProps {
   className?: string;
-  title: string;
-  button?: {
-    text: string;
-  };
   table: {
     head: {
       name: string;
@@ -27,37 +23,23 @@ interface TableProps {
   };
 }
 
-export const Table: React.FC<TableProps> = ({
-  table,
-  title,
-  button,
-  ...rest
-}) => (
+export const Table: React.FC<TableProps> = ({ table, ...rest }) => (
   <S.Container {...rest}>
-    <div>
-      <h5>{title}</h5>
-      {button && (
-        <button type="button">
-          <span className="material-icons-round calendar">&#xe145;</span>
-          <p>{button.text}</p>
-        </button>
-      )}
-    </div>
     <table>
       <thead>
         <tr>
           {table.head.map(({ label }) => (
-            <td>
+            <td key={label}>
               <strong>{label}</strong>
             </td>
           ))}
         </tr>
       </thead>
       <tbody>
-        {table.body.rows.map(({ values, actions }) => (
-          <tr>
+        {table.body.rows.map(({ values, actions }, index) => (
+          <tr key={String(`-${index}`)}>
             {Object.keys(values).map((key) => (
-              <td>
+              <td key={key}>
                 <p>{values[key]}</p>
               </td>
             ))}
