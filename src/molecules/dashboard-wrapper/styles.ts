@@ -14,6 +14,8 @@ export const Container = styled.div`
 
   > aside {
     grid-area: menu;
+
+    overflow-y: scroll;
   }
 
   > header {
@@ -117,7 +119,6 @@ export const Menu = styled.div`
   display: inline-block;
 
   width: 100%;
-  height: 100%;
 
   border-right: 2px solid ${({ theme }) => theme.color.primary_lighten};
 
