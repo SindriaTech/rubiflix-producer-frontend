@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
+  min-height: 1024px;
+  height: auto;
 `;
 
 export const SignInBox = styled.div`
   max-width: 448px;
-  min-height: 100vh;
-  height: 100%;
+  min-height: 1024px;
 
   position: relative;
 
