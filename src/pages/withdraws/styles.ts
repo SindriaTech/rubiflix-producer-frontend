@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: block;
+
   .withdraws_options,
   .withdraws_block {
     margin-top: 40px;

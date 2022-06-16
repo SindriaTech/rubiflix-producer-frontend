@@ -25,6 +25,8 @@ export const File = styled.div<ImageProps>`
 
   position: relative;
 
+  transition: all 0.4s;
+
   input {
     position: absolute;
     top: 0;
@@ -67,6 +69,13 @@ export const File = styled.div<ImageProps>`
 
   .accept-files {
     margin-top: 24px;
+  }
+
+  &:hover {
+    border-style: solid;
+    border-width: 3px;
+
+    filter: brightness(0.75);
   }
 `;
 

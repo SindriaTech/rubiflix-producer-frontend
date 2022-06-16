@@ -17,4 +17,11 @@ export const Container = styled.div`
   z-index: 3;
 `;
 
-export const Outer = styled.div``;
+export const Outer = styled.div`
+  max-width: 736px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

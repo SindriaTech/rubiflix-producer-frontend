@@ -2,12 +2,30 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 import { DashboardBlock } from '../../atoms';
 import { Table } from '../../molecules';
+import { useModal } from '../../providers';
 import { GridContainer } from '../../styles';
 
 import * as S from './styles';
 
 export const Withdraws: React.FC = () => {
+  const { toggleModal } = useModal();
   const { color } = useTheme();
+
+  const createWithdraw = () => {
+    toggleModal({
+      createWithdraw: {
+        isOpen: true
+      }
+    });
+  };
+
+  const createWithdrawMethod = () => {
+    toggleModal({
+      createWithdrawMethod: {
+        isOpen: true
+      }
+    });
+  };
 
   return (
     <S.Container>
@@ -63,7 +81,8 @@ export const Withdraws: React.FC = () => {
           header={{
             title: 'Seus meios de saque',
             button: {
-              text: 'Novo meio'
+              text: 'Novo meio',
+              onClick: createWithdrawMethod
             }
           }}
           className="withdraws_options"
@@ -104,7 +123,8 @@ export const Withdraws: React.FC = () => {
           header={{
             title: 'Seus saques',
             button: {
-              text: 'Novo saque'
+              text: 'Novo saque',
+              onClick: createWithdraw
             }
           }}
           className="withdraws_block"
